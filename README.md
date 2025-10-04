@@ -241,6 +241,108 @@ print(dfd)
 <img width="793" height="709" alt="image" src="https://github.com/user-attachments/assets/447e6c96-de7a-498a-a311-98768a7bea2c" />
 
 
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+data=pd.read_csv("iris.csv")
+
+print(data)
+
+df=pd.DataFrame(data)
+
+print(pd)
+
+x=df["petal_length"]
+
+y=df["sepal_length"]
+
+plt.bar(x,y)
+
+plt.show()
+
+<img width="757" height="684" alt="image" src="https://github.com/user-attachments/assets/4580a4eb-f3b2-4d18-a526-3530a1c27101" />
+
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+data=pd.read_csv("iris.csv")
+
+print(data)
+
+df=pd.DataFrame(data)
+
+print(pd)
+
+x=df["petal_length"]
+
+y=df["sepal_length"]
+
+plt.scatter(x,y)
+
+plt.show()
+
+<img width="772" height="692" alt="image" src="https://github.com/user-attachments/assets/c5150576-6d65-4242-8999-aa6086ffa003" />
+
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+data=pd.read_csv("iris.csv")
+
+print(data)
+
+df=pd.DataFrame(data)
+
+print(pd)
+
+dff=plt.boxplot(x="petal_width",data=df)
+
+print(dff)
+
+<img width="1064" height="766" alt="image" src="https://github.com/user-attachments/assets/e055c3ac-2056-4146-be88-3f31c406a7a5" />
+
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+data=pd.read_csv("iris.csv")
+
+print(data)
+
+df=pd.DataFrame(data)
+
+print(pd)
+
+x=df["petal_length"]
+
+y=df["sepal_length"]
+
+plt.plot(x,y)
+
+plt.show()
+
+<img width="765" height="689" alt="image" src="https://github.com/user-attachments/assets/456bd290-412f-4b0d-8089-5cc6373e2e2b" />
+
+
+
+
+
+
+
+
 
                    
                    
