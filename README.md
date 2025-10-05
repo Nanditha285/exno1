@@ -337,6 +337,61 @@ plt.show()
 <img width="765" height="689" alt="image" src="https://github.com/user-attachments/assets/456bd290-412f-4b0d-8089-5cc6373e2e2b" />
 
 
+import pandas as pd
+
+import numpy as np
+
+from scipy import stats
+
+data=pd.read_csv("iris.csv")
+
+df=pd.DataFrame(data)
+
+z_scores = np.abs(stats.zscore(df.select_dtypes(include=[np.number])))
+
+df_cleaned=df[(z_scores<3).all(axis=1)]
+
+df_cleaned
+
+<img width="472" height="373" alt="image" src="https://github.com/user-attachments/assets/4a70a26f-53a8-4eb5-bdaa-677117914420" />
+
+
+import pandas as pd 
+
+import numpy as np
+
+data_set = pd.read_csv("iris.csv")
+
+df = pd.DataFrame(data_set)
+
+Q1 = df["sepal_width"].quantile(0.25)
+
+Q3 = df["sepal_width"].quantile(0.75)
+
+IQR = Q3 - Q1
+
+lower_bound = Q1 - 1.5 * IQR
+
+upper_bound = Q3 + 1.5 * IQR
+
+print("The Orginal DataSet"
+)
+print(df)
+
+outliers = df[(df['sepal_width'] < lower_bound) | (df['sepal_width'] > upper_bound)]
+
+print("The Outliers")
+
+print(outliers)<img width="696" height="622" alt="image" src="https://github.com/user-attachments/assets/09260c64-36ec-4014-b5cb-7fa9d42aa9c9" />
+
+
+df_clean = df[(df['sepal_width'] >= lower_bound) & (df['sepal_width'] <= upper_bound)]
+
+print("The Dataset after removing the outliers")
+
+print(df_clean)
+
+<img width="696" height="622" alt="image" src="https://github.com/user-attachments/assets/b4d527b3-ea3c-43d8-bb96-6b70a793119a" />
 
 
 
