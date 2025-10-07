@@ -55,11 +55,10 @@ data=pd.read_csv(r"C:\Users\acer\Downloads\Data_set.csv")
 
 df=pd.DataFrame(data)
 
-print(df)
+df.info()
 
-df.info
+![WhatsApp Image 2025-10-07 at 10 18 31_a7000196](https://github.com/user-attachments/assets/d3662145-00a2-4493-98b7-ff6bf7b44098)
 
-<img width="777" height="701" alt="Screenshot 2025-10-04 083921" src="https://github.com/user-attachments/assets/96655e09-f315-4eac-8ec0-5c2f9f7e46c9" />
 
 
 import pandas as pd 
